@@ -1,0 +1,182 @@
+
+nav {
+    height: 60px; 
+    background-color:white; /* Set the background color */
+    text-align: center; /* Center align the items */
+}
+
+nav ul {
+    display: flex; /* Display the list items horizontally */
+}
+
+nav h1 {
+    text-decoration: none;
+    color: darkblue; /* Set the text color */
+    font-weight:  bolder; /* Make the text bold */
+}
+body h1 {
+    text-align: center;
+}
+body textarea{
+    margin-left: 240px;
+}
+textarea.form-control{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 700px;
+    height: 205px;
+    border-radius: 10px;
+}
+textarea{
+    resize:vertical;
+}
+/* Existing CSS for the navigation and main content (from previous examples) */
+
+/* Style the buttons */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-evenly; /* Distribute items evenly along the main axis */
+    align-items: center;
+    
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color:  #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn1:hover {
+    background-color: black; /* Change button color on hover */
+}
+
+.btn2 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #2ecc71; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn2:hover {
+    background-color: black; /* Change button color on hover */
+}
+.btn3 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #9b59b6; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn3:hover {
+    background-color:black; /* Change button color on hover */
+}
+.btn4 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #e74c3c; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn4:hover {
+    background-color:black; /* Change button color on hover */
+}
+.btn5 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #f39c12; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn5:hover {
+    background-color: black; /* Change button color on hover */
+}
+.btn6 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #34495e; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn6:hover {
+    background-color: black; /* Change button color on hover */
+}
+.btn7 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color:  #1abc9c; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn7:hover {
+    background-color:  black; /* Change button color on hover */
+}
+.btn8 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #d35400; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn8:hover {
+    background-color:black; /* Change button color on hover */
+}
+.btn9 {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #7f8c8d; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add some rounded corners */
+    text-decoration: none; /* Remove underlines from anchor buttons */
+    margin-right: 10px; /* Add space between buttons */
+    border-radius: 1000px;
+}
+
+.btn9:hover {
+    background-color: black; /* Change button color on hover */
+}

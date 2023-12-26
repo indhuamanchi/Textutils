@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Textutils</title>
+</head>
+<body>
+    <nav>
+        <h1>-----TEXTUTILS----- </h1>
+    </nav>
+    <h1 style="color: darkmagenta;" >Enter your text</h1>
+    <textarea class="form-control" id="mybox" rows="8" style="background-color:white; color:black;"></textarea>
+    <div class="buttons">
+        <button class="btn1" id="uppercasebtn">convert to uppercase</button>
+        <button class="btn2" id="lowercasebtn">convert to lowercase</button>
+        <button class="btn3" id="cap">capitalize</button>
+        <button class="btn4" id="removeextraspace">remove extra spaces</button>
+        <button class="btn5" id="copytxt">copy text</button>
+        <button class="btn6" id="redo">redo</button>
+        <button class="btn7" id="undo">undo</button>
+        <button class="btn8" id="clear">clear</button>
+    </div>
+
+    <script>
+        const textarea = document.getElementById('mybox');
+        const uppercaseButton = document.getElementById('uppercasebtn');
+        const lowercaseButton = document.getElementById('lowercasebtn');
+        const capitalizeButton = document.getElementById('cap');
+        const removeExtraSpaceButton = document.getElementById('removeextraspace');
+        const copyTextButton = document.getElementById('copytxt');
+        const clearButton = document.getElementById('clear');
+        const undoButton = document.getElementById('undo');
+        const redoButton = document.getElementById('redo');
+
+        let textHistory = []; // Store text history
+        let currentStateIndex = -1; // Index of the current state in history
+
+        // Function to save current text to history
+        function saveToHistory() {
+            currentStateIndex++;
+            textHistory = textHistory.slice(0, currentStateIndex); // Discard redo states
+            textHistory.push(textarea.value);
+            redoButton.disabled = true; // Disabling redo after new action
+        }
+
+        // Function to update textarea with the previous text
+        function undo() {
+            if (currentStateIndex > 0) {
+                currentStateIndex--;
+                textarea.value = textHistory[currentStateIndex];
+                redoButton.disabled = false; // Enabling redo after undo
+            }
+        }
+
+        // Function to redo changes
+        function redo() {
+            if (currentStateIndex < textHistory.length - 1) {
+                currentStateIndex++;
+                textarea.value = textHistory[currentStateIndex];
+            }
+            if (currentStateIndex === textHistory.length - 1) {
+                redoButton.disabled = true; // Disable redo if at the most recent state
+            }
+        }
+
+        // Add event listeners
+        uppercaseButton.addEventListener('click', function () {
+            saveToHistory();
+            const text = textarea.value;
+            const uppercaseText = text.toUpperCase();
+            textarea.value = uppercaseText;
+        });
+
+        lowercaseButton.addEventListener('click', function () {
+            saveToHistory();
+            const text = textarea.value;
+            const lowercaseText = text.toLowerCase();
+            textarea.value = lowercaseText;
+        });
+
+        capitalizeButton.addEventListener('click', function () {
+            saveToHistory();
+            const text = textarea.value;
+            const words = text.split(' ');
+            const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+            const capitalizedText = capitalizedWords.join(' ');
+            textarea.value = capitalizedText;
+        });
+
+        removeExtraSpaceButton.addEventListener('click', function () {
+            saveToHistory();
+            const text = textarea.value;
+            const textWithoutExtraSpaces = text.replace(/\s+/g, ' ');
+            textarea.value = textWithoutExtraSpaces.trim();
+        });
+
+        copyTextButton.addEventListener('click', function () {
+            textarea.select();
+            document.execCommand('copy');
+        });
+
+        clearButton.addEventListener('click', function () {
+            saveToHistory();
+            textarea.value = '';
+        });
+
+        undoButton.addEventListener('click', function () {
+            undo();
+        });
+
+        redoButton.addEventListener('click', function () {
+            redo();
+        });
+    </script>
+</body>
+</html>
+
